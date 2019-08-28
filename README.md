@@ -62,3 +62,23 @@ aap88jdt37dgdgkek1c7dq69ua	team_post_all	authentication.roles.team_post_all.name
 masesduwobn95dqoyba5xmtz5o	team_post_all_public	authentication.roles.team_post_all_public.name	authentication.roles.team_post_all_public.description	1552912816258	1552912816258	0	 create_post_public	f	t
 \.
 ```
+
+
+
+### Add primary key constrain to column
+
+#### Syntax
+
+```sql
+ALTER TABLE ONLY {{table}}
+    ADD CONSTRAINT {{constrain_name}} PRIMARY KEY ({{column}});
+```
+
+#### Example
+
+```sql
+ALTER TABLE ONLY public.audits
+    ADD CONSTRAINT audits_pkey PRIMARY KEY (id);
+```
+
+
