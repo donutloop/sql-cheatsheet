@@ -81,4 +81,20 @@ ALTER TABLE ONLY public.audits
     ADD CONSTRAINT audits_pkey PRIMARY KEY (id);
 ```
 
+### Add unique constrain to column
+
+#### Syntax
+
+```sql
+ALTER TABLE ONLY {{table}}
+    ADD CONSTRAINT {{constrain_name}} UNIQUE ({{column}});
+```
+
+#### Example
+
+```sql
+ALTER TABLE ONLY public.schemes
+    ADD CONSTRAINT schemes_name_key UNIQUE (name);
+```
+
 
