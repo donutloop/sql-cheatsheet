@@ -43,3 +43,22 @@ CREATE TABLE public.channelmembers (
 );
 
 ```
+
+### Copy from stdin
+
+#### Syntax
+
+```sql
+COPY {{tablename}} ({{column}},{{column}}) FROM stdin;
+{{value}} {{value}}
+\.
+```
+
+#### Example
+
+```sql
+COPY public.roles (id, name, displayname, description, createat, updateat, deleteat, permissions, schememanaged, builtin) FROM stdin;
+aap88jdt37dgdgkek1c7dq69ua	team_post_all	authentication.roles.team_post_all.name	authentication.roles.team_post_all.description	1552912816230	1552912816230	0	 create_post	f	t
+masesduwobn95dqoyba5xmtz5o	team_post_all_public	authentication.roles.team_post_all_public.name	authentication.roles.team_post_all_public.description	1552912816258	1552912816258	0	 create_post_public	f	t
+\.
+```
