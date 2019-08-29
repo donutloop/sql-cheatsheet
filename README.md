@@ -97,4 +97,18 @@ ALTER TABLE ONLY public.schemes
     ADD CONSTRAINT schemes_name_key UNIQUE (name);
 ```
 
+### Drop a table  
+
+#### Syntax
+
+```sql
+DROP TABLE IF EXISTS "{{table}}";
+```
+
+#### Example
+
+```sql
+DROP TABLE IF EXISTS "log";
+```
+
 
